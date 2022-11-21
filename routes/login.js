@@ -15,7 +15,7 @@ const SignUpData = require('../model/signupdata');
 
 //postlogin mongo validation
 
-app.post('/', function (req, res) {
+app.post('/api/', function (req, res) {
 
     console.log(req.body, "/loginroute");
     let username = req.body.username;
