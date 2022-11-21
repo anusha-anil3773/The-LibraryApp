@@ -121,7 +121,7 @@
     padding: 20rem 0 19rem;
   }
   .hero {
-    padding: 20rem 0;
+    padding: 10rem 0;
   }
   .hero-heading {
     font-size: 3rem;
@@ -143,14 +143,17 @@
 
 .btn2 {
   width: 200px;
-  background-color: rgb(117, 116, 116)!important;
-  color: white;
+  background-color: rgb(245, 241, 241)!important;
+  color: rgb(22, 20, 20);
   
 }
 
 .phone{
     border-radius: 10px;
     border: black ;
+   margin-top:15em;
+  
+    height: 30px;
     
 }
 .add1{
@@ -164,8 +167,8 @@
 }
 
 .phones>img{
-  width: 400px;
-  height:600px;
+  width: 300px;
+  height:400px;
   object-fit: cover;
   box-shadow:         3px 3px 5px 6px rgb(150, 149, 149);}
 
