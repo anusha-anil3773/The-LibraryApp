@@ -1,4 +1,3 @@
-const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
@@ -8,7 +7,7 @@ let app = express();
 
 const port = process.env.PORT || 8887;
 
-app.use(express.static('/dist/frontend/index.html'));
+// app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true })); //middleware portion for adding data
 app.use(cors());
 app.use(express.json());
@@ -43,6 +42,9 @@ function verifyToken(req, res, next) {//token
         next()
     }
 
+const path = require('path');
+app.use(express.static('./dist/frontend'));
+
 const login = require('./routes/login'); //login page
 app.use('/login', login);
 app.get('/logout', function (req, res) {
@@ -62,10 +64,9 @@ app.use('/add',verifyToken, add);
 const dlete = require('./routes/delete'); //add book and add author page
 app.use('/delete',verifyToken, dlete);
 
-
-
 app.get('/*', function(req,res){
-    res.sendFile(path.join(__dirname+'/dist/frontend/index.html'));});
+    res.sendFile(path.join(__dirname + '/dist/frontend/index.html'));
+});
 
 
 app.listen(port, () => {
