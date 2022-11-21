@@ -1,6 +1,6 @@
 const express = require('express');
 const BookData = require('../model/bookdata');
-const AuthorData = require('../model/authordata');
+
 const path = require('path');
 
 
@@ -29,25 +29,6 @@ app.post('/api/add_book', function (req, res) { //image add book
     })
 
 });
-
-// app.post('/api/add_author', function (req, res) {   //add image author
-//     let item = {
-//         title: req.body.author.title,
-//         country: req.body.author.country,
-//         image: req.body.author.image,
-//         about: req.body.author.about,
-//         dob: req.body.author.dob,
-//         FamousWorks: req.body.author.FamousWorks
-//     }
-
-//     let author = AuthorData(item);
-//     author.save().then(function (data) {
-//         res.send(true)
-//     }).catch(function (error) {
-//         res.send(false)
-//     })
-
-// });
 
 
 //-------------------------------------------------- Updated-------------------//
@@ -82,44 +63,6 @@ app.post('/api/update_book', function (req, res) {
         })
 
 });
-
-// app.post('/api/update_author', function (req, res) {
-    
-//     let item = {
-//         title: req.body.author.title,
-//         country: req.body.author.country,
-//         image: req.body.author.image,
-//         about: req.body.author.about,
-//         dob: req.body.author.dob,
-//         FamousWorks: req.body.author.FamousWorks
-//     }
-
-//     let _id = req.body.author._id;
-//     let updateAuthor = { $set: item };
-
-//     AuthorData.updateOne({ _id: _id }, updateAuthor)
-//         .then((respond) => {
-//             if (respond) {
-//                 console.log('mongo updated successfully for author')
-//                 res.send(true)
-//             }
-//             else {
-//                 console.log('mongo update error', error)
-//                 res.send(false)
-//             }
-//         })
-
-// });
-
-
-
-
-
-
-//-------------------------------------------------- author--------------------//
-
-
-
 
 
 

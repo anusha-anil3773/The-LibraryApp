@@ -7,13 +7,6 @@ const SignUpData = require('../model/signupdata');
 
 
 
-//signin mongo check up and admin validation
-
-// app.get('/', function (req, res) {
-//     res.render('login');
-// });
-
-//postlogin mongo validation
 
 app.post('/api/', function (req, res) {
 
